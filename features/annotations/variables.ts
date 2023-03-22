@@ -17,7 +17,7 @@ let truths: boolean[] = [true, true, false];
 class Car {
 
 }
-let car: Car = new Car();
+//let car: Car = new Car();
 
 // Object literal
 let point: {x: number; y: number;} = {
@@ -50,4 +50,11 @@ for (let index = 0; index < words.length; index++) {
 
 // 3) Variable whose type cannot be inferred correctly
 let numbers = [-10, -1, 12];
-let numberAboveZero;
+let numberAboveZero: boolean | number = false;
+
+for (let index = 0; index < numbers.length; index++) {
+    const number = numbers[index];
+    if (number > 0) {
+        numberAboveZero = number;
+    }
+}
